@@ -1,0 +1,62 @@
+
+
+.welcome_msg{
+line-height: 19px;
+text-align:center;
+  color: #323232;
+
+
+}
+  .mask{
+    width: 1478px; 
+    font-size: 32pt; 
+    color:white; 
+    height: 602px; 
+    display: none; 
+    opacity: 0.8;
+  }
+.welcome_head{
+  color:black;
+  margin-bottom:17px;
+  font-size: 23px;
+    font-weight: 600;
+    margin-top: 21px;
+}
+.wlm_btn{
+    padding: 8px 18px 8px 18px;
+    color: white;
+    background-color: #25c16f;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-right: 151px;
+}
+   a .wlm_btn :hover{
+    color:white;
+    text-decoration: none;
+  }
+  .right_arr{
+padding-left:10px;
+  }
+.ceo_img_width{
+width:24%;
+border-radius:50%;
+}
+.close {
+    float: center !important;
+    font-size: 12px !important;
+    font-weight: 100 !important;
+    line-height: 1 !important;
+    text-shadow: 0 !important;
+    opacity:1 !important
+    
+}
+    .footer_msg{
+line-height: 19px;
+    text-align: center;
+    margin-top: 29px;
+    font-size: 13px;
+color: #323232;
+font-weight:400;
+}

@@ -20,13 +20,44 @@
      <link href="css/bootstrap-colorpicker.min.css" rel="stylesheet">
      <link href="css/ion.rangeSlider.css" rel="stylesheet">
       <link href="css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
-   
+      <!--mainwelcome screen-->
+      <link href="css/main.css" rel="stylesheet">
+      <!--hint-->
+      <link href="css/hint.css" rel="stylesheet">
+       <!--popup-->
+      <link href="css/popup.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="css/custom.min.css" rel="stylesheet">
      <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
+    <!--welcome screen-->
+    <div id="boxes">
+        <div id="dialog" class="window">
+          <center><img src="images/ceo.jpg" class="img-responsive ceo_img_width"></center>
+          <h1 class="welcome_head">
+            Welcome to Levler
+          </h1>  
+          <div id="lorem">
+            <p class="welcome_msg">
+              Hey (user name)! I'm Prashant, the CEO of Levler. I wanted to personally welcome you and give youa tour of the product.
+            </p>
+            <p class="welcome_msg">
+             It's really easy to collect your customer reviews with Levler.Let's get started with the basics.
+            </p>
+          </div>
+          <div id="popupfoot">
+             <center> <a class=" close agree" href="">
+                <span class="wlm_btn">
+                  set up your helpdesk
+                </span>
+              </a></center>
+          </div>
+             <p class="footer_msg">Takes less than a minute</p>
+        </div>
+        <div style="width: 1478px; font-size: 32pt; color:white; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
+      </div>
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -182,7 +213,7 @@
                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
               </div>
               <ul class="nav navbar-nav navbar-right">
-                <li class="">
+                <li class="new_btn1">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                     <img src="images/img.jpg" alt="">John Doe
                     <span class=" fa fa-angle-down"></span>
@@ -485,6 +516,12 @@
     <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/bootstrap-colorpicker.min.js"></script>
     <script src="js/ion.rangeSlider.min.js"></script>
+    <!--main-->
+    <script src="js/main.js"></script>
+    <!--hint-->
+    <script src="js/hint.js"></script>
+    <!-- hint-id Scripts -->
+    <script src="js/hint-id.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="js/custom.min.js"></script>
     <script type="text/javascript">
@@ -562,6 +599,47 @@ $(document).ready(function () {
         }
     });
 });
+
+//initialize instance
+var enjoyhint_instance = new EnjoyHint({});
+
+//simple config. 
+//Only one step - highlighting(with description) "New" button 
+//hide EnjoyHint after a click on the button.
+var enjoyhint_script_steps = [
+  
+   {
+    'next .next57_coworking' : 'Click here to switch between different locations you want to manage.',
+  },
+  {
+    'click .location' : 'Add location and social media profiles you want to manage.',
+  } ,
+  
+  {
+    'click .fbpage' : 'Setup your business fb page.'
+  } ,
+  {
+    'click .invites' : 'Send invites to your customers for review.'
+  } ,
+  {
+    'next .send_review_invites' : 'Enter Name and Phone no. to send invite sms.'
+  } ,
+  {
+    'next .analytics' : 'check the analytical part'
+  } ,
+  {
+    'next .reviews' : 'check the reviews'
+  } ,
+  {
+    'click .profile' : 'check your profile'
+  } ,
+];
+
+//set script config
+enjoyhint_instance.set(enjoyhint_script_steps);
+//run Enjoyhint script
+enjoyhint_instance.run();
+// Instance the tour
 
       </script>
   </body>

@@ -1,0 +1,55 @@
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}  
+#boxes .window {
+  position:absolute;
+  left:469.5px;
+  top:95.5px;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+  text-align: center;
+}
+#boxes #dialog {
+  width: 45%;
+    height: auto;
+    padding: 10px;
+    background-color: #ffffff;
+    font-family: 'Segoe UI Light', sans-serif;
+    font-size: 15px;
+   padding: 51px 46px 51px 47px;
+}
+.maintext{
+	text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  text-decoration: none;
+  color: #323232;
+}
+
+#lorem{
+	font-family: "Segoe UI", sans-serif;
+	font-size: 13px;
+  text-align: center;
+}
+#popupfoot{
+	font-family: "Segoe UI", sans-serif;
+    font-size: 12px;
+    padding: 24px 20px 6px 17px;
+    text-align:center;
+}
+#popupfoot a{
+	text-decoration: none;
+}
+
+.window{
+top: 90.5px !important;
+    left: 380.5px !important;
+    display: block;
+}
